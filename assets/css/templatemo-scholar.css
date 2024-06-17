@@ -1692,8 +1692,13 @@ body {
   .header-area {
     top: 0px;
   }
-  .header-area .main-nav .logo h1 {
+
+  .header-area .main-nav .logo {
     border-right: none;
+    margin-top: -10px;
+    height: 140px;
+    margin-left: 16%;
+    
   }
   .main-banner .item {
     padding: 80px 30px 120px 30px !important;
