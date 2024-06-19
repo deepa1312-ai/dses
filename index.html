@@ -23,6 +23,7 @@
       margin-left: 0%; 
       width: 100%;
       padding: 10%;
+      height: 350px;
       font-size: larger;/* Remove space between cards */
     }
     .card-dark {
@@ -43,21 +44,38 @@
   padding: 40px 20px; /* Add some padding */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for distinction */
   width: 100%; 
-  text-align: center;
+  text-align: left;
   margin-bottom: -4%;/* Ensure the section covers 100% width */
 }
 
 .pie-chart-section img{
   height: 50%;
 }
-
+  .navbar-brand img {
+      width: 250px; /* Increase logo size */
+      height: 75px; /* Increase logo height */
+    }
+    .navbar-nav .nav-link {
+      font-size: 22px; /* Increase menu item size */
+      margin-left: 20px; /* Add spacing between menu items */
+      margin-right: 20px; /* Add spacing between menu items */
+    }
+    .navbar-nav .dropdown-menu .dropdown-item {
+      margin-top: 5px; /* Add spacing between dropdown items */
+      margin-bottom: 5px;
+      font-size: 17px; /* Add spacing between dropdown items */
+    }
+    /* Add hover effect for dropdown */
+    .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    }
   </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">
-    <img src="./assets/images/logo.png" width="200" height="50" class="d-inline-block align-top" alt="">
+    <img src="./assets/images/logo.png" class="d-inline-block align-top" alt="">
 
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,10 +87,16 @@
         <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
+        <a class="nav-link" href="./aboutus.html">About Us</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Our Programs</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
+          Our Programs
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Women Centric</a>
+          <a class="dropdown-item" href="#">Child Centric</a>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./contactus.html">Contact Us</a>
@@ -107,7 +131,6 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
 
 <div class="container mt-5">
   <div class="row">
@@ -145,11 +168,8 @@
   </div>
 </div>
 
-
-
-
 <!-- Footer Section -->
-<footer class="bg-dark text-center text-lg-start mt-5">
+<footer class="bg-dark text-left text-lg-start mt-5">
   <div class="container p-4">
     <div class="row">
       <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
