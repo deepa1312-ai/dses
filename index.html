@@ -9,6 +9,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style>
+    body{
+      background-color: #252525;
+    }
     .carousel-item {
       height: 400px; /* Adjust the height as needed */
     }
@@ -40,17 +43,39 @@
     }
 }
 .pie-chart-section {
-  background-color: #f8f9fa; /* Light grey background for shading */
+  background-color: white; /* Light grey background for shading */
   padding: 40px 20px; /* Add some padding */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for distinction */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 10); /* Subtle shadow for distinction */
   width: 100%; 
   text-align: left;
   margin-bottom: -4%;/* Ensure the section covers 100% width */
 }
-
-.pie-chart-section img{
-  height: 50%;
+.intro {
+  background-color: white; /* Light blue background for the section */
+  padding: 40px 20px; /* Add padding to the section */
+  border-radius: 10px; /* Rounded corners for the section */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for distinction */
+  margin-bottom: 30px; 
+  padding: 5%;
+  align-items: left;/* Space below the section */
 }
+
+.intro-title {
+  font-size: 32px; /* Larger font size for the title */
+  font-weight: bold; /* Bold font for the title */
+  margin-bottom: 20px; /* Space below the title */
+  color: #333; /* Dark color for the title */
+}
+
+.intro-text {
+  font-size: 18px; /* Standard font size for the text */
+  margin-bottom: 20px; /* Space below each paragraph */
+  color: #555; /* Medium dark color for the text */
+  line-height: 1.6; 
+  text-align: left;/* Line height for better readability */
+}
+
+
   .navbar-brand img {
       width: 250px; /* Increase logo size */
       height: 75px; /* Increase logo height */
@@ -69,41 +94,50 @@
     .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
       display: block;
     }
+
+    .pie-chart {
+  width: 340px;
+  height: 340px;
+  background: conic-gradient(#8b22ff 0% 25%, #ffc33b 25% 56%, #21f3d6 56% 100%);
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="./assets/images/logo.png" class="d-inline-block align-top" alt="">
 
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="./aboutus.html">About Us</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
-          Our Programs
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Women Centric</a>
-          <a class="dropdown-item" href="#">Child Centric</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="./contactus.html">Contact Us</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./index.html">
+      <img src="./assets/images/logo.png" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./aboutus.html">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
+            Our Programs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="./womenprogram.html">Women Centric</a>
+            <a class="dropdown-item" href="./childprogram.html">Child Centric</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contactus.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -131,8 +165,20 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+<div class="intro">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2 class="intro-title">Empowering Women, Nurturing Children<br> Building a Thriving Future Together</h2><br>
+      <p class="intro-text">
+        Welcome to Didactic NGO, where we are dedicated to driving sustainable development with a focus on women and children. Our holistic programs empower women through health, economic, educational, and leadership initiatives, while our child-centric efforts ensure comprehensive education, health and nutrition, protection, and talent development. By addressing the unique needs of women and children, we strive to create a more equitable and thriving society where everyone can reach their full potential and contribute to their communities.
+   
+        Join us in making a meaningful impact and fostering a brighter future.
+      </p>
+    </div>
+  </div>
+</div>
 
-<div class="container mt-5">
+<div style="background-color: ;" class="container mt-5">
   <div class="row">
     <div class="col-md-6">
       <div class="card">
@@ -157,7 +203,7 @@
 <div class="container-fluid mt-5 pie-chart-section">
   <div class="row align-items-center">
     <div class="col-md-6">
-      <img src="./assets/images/image.png" alt="Pie Chart" class="img-fluid w-100">
+    <center>  <div class="pie-chart"></div></center>
     </div>
     <div class="col-md-6">
     <center>  <h4 class="text-uppercase">Data Insights</h4></center>
@@ -175,20 +221,20 @@
       <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
         <h5 class="text-white">About Us</h5>
         <p class="text-white">
-          Our company is dedicated to providing the best quality service and exceeding customer expectations. We believe in innovation, integrity, and customer satisfaction.
+          Founded in 2009, the Didactic Society for Effective Study (DSES) is dedicated to enhancing educational experiences through structured and impactful teaching methods. Our mission is to provide students with comprehensive resources and support . We are committed to the rehabilitation and empowerment of children and women, offering specialized programs that support their personal and academic growth ent where effective learning flourishes.
         </p>
       </div>
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
         <h5 class="text-white">Links</h5>
         <ul class="list-unstyled mb-0">
           <li>
-            <a href="#!" class="text-white">Home</a>
+            <a href="./index.html" class="text-white">Home</a>
           </li>
           <li>
-            <a href="#!" class="text-white">About Us</a>
+            <a href="./aboutus.html" class="text-white">About Us</a>
           </li>
           <li>
-            <a href="#!" class="text-white">Contact Us</a>
+            <a href="./contactus.html" class="text-white">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -196,13 +242,13 @@
         <h5 class="text-white">Contact</h5>
         <ul class="list-unstyled mb-0">
           <li>
-            <p class="text-white mb-0">Email: info@yourcompany.com</p>
+           <a href="mailto:dses.ngo@gmail.com"> <p class="text-white mb-0">Email: dses.ngo@gmail.com</p>
           </li>
           <li>
-            <p class="text-white mb-0">Phone: +123 456 7890</p>
+            <a href="tel:+91-9811322293"><p class="text-white mb-0">Phone: +91 9811322293</p></a>
           </li>
           <li>
-            <p class="text-white mb-0">Address: 123 Main Street, City, Country</p>
+            <p class="text-white mb-0">Address: 304 Bhera Enclave, Paschim Vihar, New Delhi 110087</p>
           </li>
         </ul>
       </div>
